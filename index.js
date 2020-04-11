@@ -16,14 +16,6 @@ bot.on('message', async (msg) => {
     if(cmd == 'ping'){
       msg.channel.send("pong xD")
     }
-    if(cmd == 'message'){
-      if(args.length < 1) return msg.channel.send("Pas assez d'arguments")
-      var message = ""
-      for(let i = 0; i < args.length; i++){
-        message += args[i] + " "
-      }
-      msg.channel.send(" " + message)
-    }
   }
 });
 
