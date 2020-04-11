@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args) => {
   .addField('Commandes:', '-message: Répéter un message choisi')
   .setFooter("J'espère vous avoir aidé...");
   msg.channel.send(hEmbed);
-}
+};
 
 module.exports.help = {
   name: 'help'
