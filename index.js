@@ -22,7 +22,7 @@ bot.on('message', async (msg) => {
       for(let i = 0; i < args.length; i++){
         message += args[i] + " "
       }
-      msg.chanel.send("message: " + message)
+      msg.channel.send("message: " + message)
     }
   }
 });
