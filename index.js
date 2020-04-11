@@ -13,9 +13,6 @@ bot.on('message', async (msg) => {
     cmd = cmdArray[0];
     args = cmdArray.slice(1);
 
-    if(cmd == 'ping'){
-      msg.channel.send("pong xD")
-    }
   }
 });
 
