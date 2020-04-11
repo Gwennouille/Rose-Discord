@@ -1,0 +1,14 @@
+{
+  "name": "Rose-Discord",
+  "version": "1.0.0",
+  "description": "a discord bot",
+  "main": "index.js",
+  "author": "Gwennoley",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  }
+}
