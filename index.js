@@ -6,4 +6,4 @@ bot.on('ready', async () =>{
   bot.user.setActivity('Papounets');
 });
 
-bot.login(process.emv.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
