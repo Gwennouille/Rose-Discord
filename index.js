@@ -9,9 +9,9 @@ bot.on('ready', async () =>{
 
 bot.on('message', async (msg) => {
   if(msg.content.startsWith(config.prefix) && !msg.author.bot){
-    cmdArray = msg.content.substring(1).split(" ")
-    cmd = cmdArray[0]
-    args = cmdArray.slice(1)
+    cmdArray = msg.content.substring(config.prefix.length).split(" ");
+    cmd = cmdArray[0];
+    args = cmdArray.slice(1);
 
     if(cmd == 'ping'){
       msg.channel.send("pong xD")
@@ -22,7 +22,7 @@ bot.on('message', async (msg) => {
       for(let i = 0; i < args.length; i++){
         message += args[i] + " "
       }
-      msg.channel.send("message: " + message)
+      msg.channel.send(" " + message)
     }
   }
 });
