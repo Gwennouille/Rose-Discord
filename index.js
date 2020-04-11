@@ -7,4 +7,10 @@ bot.on('ready', async () =>{
   bot.user.setActivity('Papounets');
 });
 
+bot.on('message', async (msg) => {
+  if(msg.content == 'bonjour'){
+    msg.channel.send('Coucou !')
+  }
+});
+
 bot.login(config.token);
