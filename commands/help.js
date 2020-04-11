@@ -5,8 +5,8 @@ module.exports.run = async (bot, msg, args) => {
   .setColor('ff0000')
   .setTtile('Vous êtes perdu ?')
   .setDescription('Je me dévoile à vous')
-  .addField('Commandes:', '-message: Répéter un message choisi')
   .addField('prefixe:', 'Utiliez le préfixe $ avant chaque commande ^^')
+  .addField('Commandes:', '-message: Répéter un message choisi')
   .setFooter("J'espère vous avoir aidé...");
   msg.channel.send(hEmbed);
 }
