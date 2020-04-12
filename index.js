@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
-const commands = require('./commands.js');
 
 bot.on('ready', async () => {
   console.log('le bot est lancé');
@@ -14,8 +13,6 @@ bot.on('message', async (msg) => {
     cmd = cmdArray[0];
     args = cmdArray.slice(1);
 
-    let command = commands.getCommand(cmd);
-    if(command) command.run(bot, msg, args);
   }
 });
 
