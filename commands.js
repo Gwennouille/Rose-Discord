@@ -12,7 +12,7 @@ const commandFactory = (command) => {
 };
 
 const getCommand = (name) => {
-  return commands.find((command) => command.name === name));
+  return commands.find((command) => command.name === name);
 };
 
 const getCommandList = () => {
@@ -25,9 +25,9 @@ fs.readdir('./commands/', (err, files) => {
   const commandFiles = files.filter(f => f.indexOf('.js') !== -1);
 
   commandFiles.forEach((commandFiles) => {
-    const command = require(`./commands/${commandFiles}`);
+    const command = require(`./commands/${commandFile}`);
 
-  commands.push(commandFactory(command);
+  commands.push(commandFactory(command));
   });
 });
 
