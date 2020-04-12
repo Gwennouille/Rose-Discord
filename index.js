@@ -3,7 +3,7 @@ const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
 
-bot.on('ready', async () =>{
+bot.on('ready', async () => {
   console.log('le bot est lancé');
   bot.user.setActivity('Papounets');
 });
