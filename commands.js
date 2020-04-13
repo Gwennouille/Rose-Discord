@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = requiere('fs');
 const commands = [];
 
 const commandFactory = (command) => {
@@ -17,20 +17,19 @@ const getCommand = (name) => {
 
 const getCommandList = () => {
   return commands.map((command) => command.name).join(', ');
-
 };
 
 fs.readdir('./commands/', (err, files) => {
-  if(err) console.error(err)
+  if(err) console.error(err);
 
-  const commandFiles = files.filter(f => f.indexOf('.js') !==1);
+  const commandFiles = files.filter(f => f.indexOf('.js') !== -1);
 
-  commandFiles.forEach((commandFile) => {
-    const command = require(`./commands/${commandFile}`)
-    commands.push(commandFactory(command));
+  commandFiles.foreach((commandFile) => {
+    const command = require(./commands/${commandFile});
+
+    command.push(commandFactory(command));
   });
-
-  });
+});
 
 module.exports.getCommand = getCommand;
 module.exports.getCommandList = getCommandList;
